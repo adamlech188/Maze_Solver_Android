@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <Button
+        android:id="@+id/solveMaze"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:onClick="solveMazeClicked"
+        android:text="Solve Maze" />
+
+    <Button
+        android:id="@+id/clearMaze"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/solveMaze"
+        android:onClick="clearmazeClicked"
+        android:text="Clear Maze" />
+
+    <CheckBox
+        android:id="@+id/drawEraseMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:onClick="drawEraseModeClicked"
+        android:tag="drawEraseModeTag"
+        android:text="Draw Walls?" />
+
+    <cs2114.mazesolver.MazeView
+        android:id="@+id/mazeView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/solveMaze" />
+    <TextView
+        android:id="@+id/statusLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/mazeView"
+        android:layout_marginTop="14dp"
+        android:text="Check if you want to draw walls."
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>
